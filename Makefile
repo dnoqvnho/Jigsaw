@@ -27,6 +27,7 @@ clean:
 	rm -rf $(processor)
 
 $(raw_data):
+	mkdir -p ./bins/
 	$(MAKE) --directory=$@
 	mv $@/data_generator ./bins/raw_data
 
